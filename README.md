@@ -6,64 +6,131 @@
 
 <br>
 
-# Nome do projeto
+# FASE 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
 
 ## Nome do grupo
+Grupo 30
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+- [Ana Beatriz Duarte Domingues](https://www.linkedin.com/in/)
+- [Junior Rodrigues da Silva](https://www.linkedin.com/in/jrsilva051/)
+- [Carlos Emilio Castillo Estrada](https://www.linkedin.com/in/)
 
 ## 👩‍🏫 Professores:
-### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+### Tutor(a)
+- [Lucas Gomes Moreira](https://www.linkedin.com/company/inova-fusca)
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+- [André Godoi Chiovato](https://www.linkedin.com/company/inova-fusca)
 
 
 ## 📜 Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+Este repositório faz parte da **Fase 2: Diagnóstico Automatizado – IA no Estetoscópio Digital** do projeto **CardioIA**.  
+O objetivo é simular a automatização do diagnóstico com Inteligência Artificial, utilizando **NLP (Processamento de Linguagem Natural)**, **classificação de texto** e **análise de sintomas** para propor diagnósticos assistidos por IA. 
 
+O projeto está dividido em **duas partes principais**:
+1. Extração de sintomas e associação a diagnósticos.  
+2. Classificação de risco clínico (Baixo Risco / Alto Risco).
 
-## 📁 Estrutura de pastas
+---
+
+## 🎯 Objetivos da Fase 2
+- Interpretar pequenos relatos médicos (frases de sintomas).  
+- Associar sintomas a possíveis doenças com base em um mapa de conhecimento.  
+- Treinar um classificador para categorizar casos em **Baixo Risco** ou **Alto Risco**.  
+- Avaliar métricas de desempenho e refletir sobre governança e vieses em IA aplicada à saúde.  
+
+---
+
+## 📂 Estrutura do Repositório
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+- **assets/** → imagens utilizadas na documentação do projeto.  
+- **src/** → código-fonte desenvolvido para esta fase.  
+  - **parte1/** → extração de sintomas e diagnósticos.  
+    - `Parte_1_–_Frases_de_sintomas_+_extração_de_informações.ipynb` → Notebook da Parte 1.  
+    - `sintomas.txt` → Frases simuladas de pacientes (10 relatos).  
+    - `mapa_sintomas.csv` → Mapa de conhecimento relacionando sintomas e doenças.  
+  - **parte2/** → classificador de risco (TF-IDF + Random Forest).  
+    - `Parte_2_–_Classificador_básico_de_texto.ipynb` → Notebook da Parte 2.  
+    - `frases_risco.csv` → Dataset com frases rotuladas em "alto risco" e "baixo risco".  
+- **README.md** → guia geral do projeto (o arquivo que você está lendo).
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+---
+  
+## 🛠️ Parte 1 – Sintomas e Diagnósticos
+- O sistema lê as frases do arquivo **`sintomas.txt`**.  
+- Identifica palavras-chave usando o **`mapa_sintomas.csv`**.  
+- Sugere diagnósticos com base em **mapeamento direto** (não supervisionado).  
 
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+📌 **Exemplos de resultados:**  
+- *"Há dois dias estou com uma dor no peito que piora quando faço esforço físico"* → **Infarto**  
+- *"Tenho falta de ar ao subir escadas desde ontem"* → **Angina**  
+- *"Apresento febre alta e calafrios desde a madrugada"* → **Infecção Viral**  
 
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+🔗 **Notebook Parte 1:** [Acesse aqui](https://colab.research.google.com/drive/1AGX4IN-DuhKycOYdWNezW_mIYzH-gTF5?usp=sharing)
 
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
+---
 
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+## 🤖 Parte 2 – Classificador de Risco
+Nesta parte foi desenvolvido um **classificador supervisionado** para identificar a gravidade dos casos.
 
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+### Metodologia
+1. Dataset criado manualmente em **`frases_risco.csv`**.  
+2. Pré-processamento: minúsculas, remoção de acentos, stopwords e pontuação.  
+3. Vetorização com **TF-IDF**.  
+4. Modelo treinado: **Random Forest**.  
+5. Avaliação por métricas de acurácia, precisão, recall e F1-Score.  
 
-## 🔧 Como executar o código
+### Resultados
+- **Acurácia geral:** 80%  
+- **Precisão (Alto Risco):** 67%  
+- **Recall (Alto Risco):** 100% ✅  
+- **Precisão (Baixo Risco):** 100%  
+- **Recall (Baixo Risco):** 67%  
+- **F1-Score:** 0.80 (bom equilíbrio)  
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+📌 **Exemplos de classificação em novas frases:**  
+- *"sinto dor intensa no peito e dificuldade para respirar"* → **ALTO RISCO (≈100%)**  
+- *"leve dor de cabeça ocasional"* → **BAIXO RISCO (≈100%)**  
+- *"desmaio repentino durante corrida"* → **ALTO RISCO (≈99%)**  
 
+🔗 **Notebook Parte 2:** [Acesse aqui](https://colab.research.google.com/drive/1CEOjHqygdc5nXL0r7z5xnC_eDLujTQWh?usp=sharing)  
+🎥 **Demonstração em vídeo:** [YouTube](https://youtu.be/lw3EUBUmiFI)  
+
+---
+
+## 📊 Análises e Conclusões
+- A **Parte 1** mostrou como estruturar relatos textuais para apoiar diagnósticos simples, funcionando como uma **base de triagem clínica inicial**.  
+- A **Parte 2** trouxe a aplicação de **IA supervisionada**, conseguindo **100% de recall para casos de Alto Risco** — ou seja, **nenhum caso grave deixou de ser identificado**.  
+- Mesmo com **80% de acurácia geral**, o desempenho é adequado em contextos médicos, onde **é preferível classificar falsos positivos como alto risco** do que deixar de identificar emergências.  
+- Conclusão: o projeto demonstra que, com técnicas acessíveis de NLP e Machine Learning, é possível **simular sistemas de apoio à decisão médica**, aproximando-se da lógica de soluções usadas em hospitais e clínicas.  
+
+---
+
+## 👥 Integrantes
+- Nome completo – RM  
+- Nome completo – RM  
+- Nome completo – RM  
+
+---
+
+## 🚀 Como Executar
+1. Abra os notebooks no Google Colab pelos links acima.  
+2. Execute as células para visualizar:  
+   - Parte 1 → Extração de sintomas e diagnósticos.  
+   - Parte 2 → Treinamento e avaliação do classificador.  
+3. Para rodar localmente (opcional):  
+   ```bash
+   pip install -r requirements.txt
+
+--- 
 
 ## 🗃 Histórico de lançamentos
 
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
+* 0.1.0 - 29/09/2025
+    * Primeira versão do projeto.
 
 ## 📋 Licença
 
