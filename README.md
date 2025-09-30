@@ -8,7 +8,7 @@
 
 # FASE 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
 
-## Nome do grupo
+### Nome do grupo
 Grupo 30
 
 ## 👨‍🎓 Integrantes: 
@@ -35,6 +35,7 @@ O projeto está dividido em **duas partes principais**:
 ---
 
 ## 🎯 Objetivos da Fase 2
+
 - Interpretar pequenos relatos médicos (frases de sintomas).  
 - Associar sintomas a possíveis doenças com base em um mapa de conhecimento.  
 - Treinar um classificador para categorizar casos em **Baixo Risco** ou **Alto Risco**.  
@@ -58,6 +59,16 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 - **README.md** → guia geral do projeto (o arquivo que você está lendo).
 
 ---
+
+## 🛠️ Tecnologias Utilizadas
+- Linguagem Principal: Python 3.x
+- Bibliotecas:
+- Pandas (manipulação de dados e CSV).
+- Scikit-learn (TF-IDF, Random Forest e métricas de avaliação).
+- NLTK ou Unidecode (pré-processamento: minúsculas, remoção de acentos, stopwords e pontuação).
+- Ambiente: Google Colab para notebooks; Jupyter Notebook para execução local; GitHub para versionamento.
+- Outros: Arquivos CSV/TXT para dados simulados.
+
   
 ## 🛠️ Parte 1 – Sintomas e Diagnósticos
 - O sistema lê as frases do arquivo **`sintomas.txt`**.  
@@ -109,23 +120,39 @@ Nesta parte foi desenvolvido um **classificador supervisionado** para identifica
 
 ---
 
-## 👥 Integrantes
-- Nome completo – RM  
-- Nome completo – RM  
-- Nome completo – RM  
+## 🚀 Como Executar
+
+1. **No Google Colab (Recomendado)**:  
+   - Acesse os links dos notebooks.  
+   - Faça upload dos arquivos `sintomas.txt`, `mapa_sintomas.csv` e `frases_risco.csv` via menu "Arquivos" no Colab (arraste e solte ou use o botão de upload).  
+   - Execute as células sequencialmente para visualizar:  
+     - Parte 1 → Extração de sintomas e diagnósticos.  
+     - Parte 2 → Treinamento e avaliação do classificador (insira frases de teste para prever risco).  
+
+2. **Localmente (Opcional)**:  
+   - Clone o repositório:  
+     ```bash
+     git clone https://github.com/seu-usuario/cardioia-fase2.git
+     cd cardioia-fase2
+     ```  
+   - Instale dependências:  
+     ```bash
+     pip install -r requirements.txt
+     ```  
+   - Execute os notebooks:  
+     ```bash
+     jupyter notebook
+     ```  
+     Abra `Parte_1_–_Frases_de_sintomas_+_extração_de_informações.ipynb` e `Parte_2_–_Classificador_básico_de_texto.ipynb`.  
 
 ---
 
-## 🚀 Como Executar
-1. Abra os notebooks no Google Colab pelos links acima.  
-2. Execute as células para visualizar:  
-   - Parte 1 → Extração de sintomas e diagnósticos.  
-   - Parte 2 → Treinamento e avaliação do classificador.  
-3. Para rodar localmente (opcional):  
-   ```bash
-   pip install -r requirements.txt
+## ✨ Ir Além 1 – Interface do CardioIA
+O projeto também conta com uma interface web desenvolvida em **React + Vite**, que simula a visualização de pacientes, agendamentos e métricas simples.
 
---- 
+👉 Confira o repositório aqui: [cardioia-portal](https://github.com/Jr-RS/grupo-30-cardioia-portal.git)
+
+---
 
 ## 🗃 Histórico de lançamentos
 
