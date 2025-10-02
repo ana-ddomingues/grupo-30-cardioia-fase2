@@ -78,7 +78,11 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 **Exemplos de resultados:**  
 - *"Há dois dias estou com uma dor no peito que piora quando faço esforço físico"* → **Infarto**  
 - *"Tenho falta de ar ao subir escadas desde ontem"* → **Angina**  
-- *"Apresento febre alta e calafrios desde a madrugada"* → **Infecção Viral**  
+- *"Apresento febre alta e calafrios desde a madrugada"* → **Infecção Viral**
+
+<img src="assets/resultados_parte1.png" alt="Diagnósticos com base na ontologia" width="500px">
+
+> *Figura 1 – Resultado da sugestão de diagnóstico com base em mapeamento direto.* 
 
 **Notebook Parte 1:** [Acesse aqui](https://colab.research.google.com/drive/1AGX4IN-DuhKycOYdWNezW_mIYzH-gTF5?usp=sharing)
 
@@ -100,12 +104,16 @@ Nesta parte foi desenvolvido um **classificador supervisionado** para identifica
 - **Recall (Alto Risco):** 100% ✅  
 - **Precisão (Baixo Risco):** 100%  
 - **Recall (Baixo Risco):** 67%  
-- **F1-Score:** 0.80 (bom equilíbrio)  
+- **F1-Score:** 0.80 (bom equilíbrio)
 
 **Exemplos de classificação em novas frases:**  
 - *"sinto dor intensa no peito e dificuldade para respirar"* → **ALTO RISCO (≈100%)**  
 - *"leve dor de cabeça ocasional"* → **BAIXO RISCO (≈100%)**  
 - *"desmaio repentino durante corrida"* → **ALTO RISCO (≈99%)**  
+
+<img src="assets/resultados_parte2.png" alt="Classificação de novas frases" width="500px">
+
+> *Figura 2 – Relatório de classificação e classificação de novas frases.*
 
 **Notebook Parte 2:** [Acesse aqui](https://colab.research.google.com/drive/1CEOjHqygdc5nXL0r7z5xnC_eDLujTQWh?usp=sharing)  
 **Demonstração em vídeo:** [YouTube](https://youtu.be/lw3EUBUmiFI)  
