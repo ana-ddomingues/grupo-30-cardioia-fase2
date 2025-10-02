@@ -6,7 +6,7 @@
 
 <br>
 
-# 🩺 Fase 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
+# Fase 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
 
 ### Nome do grupo
 Grupo 30
@@ -70,17 +70,17 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 - Outros: Arquivos CSV/TXT para dados simulados.
 
   
-## 🧾 Parte 1 – Sintomas e Diagnósticos
+## 🩺 Parte 1 – Sintomas e Diagnósticos
 - O sistema lê as frases do arquivo **`sintomas.txt`**.  
 - Identifica palavras-chave usando o **`mapa_sintomas.csv`**.  
 - Sugere diagnósticos com base em **mapeamento direto** (não supervisionado).  
 
-📌 **Exemplos de resultados:**  
+**Exemplos de resultados:**  
 - *"Há dois dias estou com uma dor no peito que piora quando faço esforço físico"* → **Infarto**  
 - *"Tenho falta de ar ao subir escadas desde ontem"* → **Angina**  
 - *"Apresento febre alta e calafrios desde a madrugada"* → **Infecção Viral**  
 
-🔗 **Notebook Parte 1:** [Acesse aqui](https://colab.research.google.com/drive/1AGX4IN-DuhKycOYdWNezW_mIYzH-gTF5?usp=sharing)
+**Notebook Parte 1:** [Acesse aqui](https://colab.research.google.com/drive/1AGX4IN-DuhKycOYdWNezW_mIYzH-gTF5?usp=sharing)
 
 ---
 
@@ -102,13 +102,13 @@ Nesta parte foi desenvolvido um **classificador supervisionado** para identifica
 - **Recall (Baixo Risco):** 67%  
 - **F1-Score:** 0.80 (bom equilíbrio)  
 
-📌 **Exemplos de classificação em novas frases:**  
+**Exemplos de classificação em novas frases:**  
 - *"sinto dor intensa no peito e dificuldade para respirar"* → **ALTO RISCO (≈100%)**  
 - *"leve dor de cabeça ocasional"* → **BAIXO RISCO (≈100%)**  
 - *"desmaio repentino durante corrida"* → **ALTO RISCO (≈99%)**  
 
-🔗 **Notebook Parte 2:** [Acesse aqui](https://colab.research.google.com/drive/1CEOjHqygdc5nXL0r7z5xnC_eDLujTQWh?usp=sharing)  
-🎥 **Demonstração em vídeo:** [YouTube](https://youtu.be/lw3EUBUmiFI)  
+**Notebook Parte 2:** [Acesse aqui](https://colab.research.google.com/drive/1CEOjHqygdc5nXL0r7z5xnC_eDLujTQWh?usp=sharing)  
+**Demonstração em vídeo:** [YouTube](https://youtu.be/lw3EUBUmiFI)  
 
 ---
 
@@ -150,16 +150,16 @@ Nesta parte foi desenvolvido um **classificador supervisionado** para identifica
 ## ✨ Ir Além 1 – Interface do CardioIA
 O projeto também conta com uma interface web desenvolvida em **React + Vite**, que simula a visualização de pacientes, agendamentos e métricas simples.
 
-👉 Confira o repositório aqui: [cardioia-portal](https://github.com/Jr-RS/grupo-30-cardioia-portal.git)
+Confira o repositório aqui: [cardioia-portal](https://github.com/Jr-RS/grupo-30-cardioia-portal.git)
 
 ---
 
-## 🗃 Histórico de lançamentos
+## Histórico de lançamentos
 
 * 0.1.0 - 29/09/2025
     * Primeira versão do projeto.
 
-## 📋 Licença
+## Licença
 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
