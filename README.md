@@ -6,7 +6,7 @@
 
 <br>
 
-# FASE 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
+# 🩺 Fase 2: Diagnóstico Automatizado – IA no Estetoscópio Digital
 
 ### Nome do grupo
 Grupo 30
@@ -70,7 +70,7 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 - Outros: Arquivos CSV/TXT para dados simulados.
 
   
-## 🛠️ Parte 1 – Sintomas e Diagnósticos
+## 🧾 Parte 1 – Sintomas e Diagnósticos
 - O sistema lê as frases do arquivo **`sintomas.txt`**.  
 - Identifica palavras-chave usando o **`mapa_sintomas.csv`**.  
 - Sugere diagnósticos com base em **mapeamento direto** (não supervisionado).  
