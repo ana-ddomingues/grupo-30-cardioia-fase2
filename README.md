@@ -13,8 +13,11 @@ Grupo 30
 
 ## 👨‍🎓 Integrantes: 
 - [Ana Beatriz Duarte Domingues](https://www.linkedin.com/in/)
+  **RM**: 560302
 - [Junior Rodrigues da Silva](https://www.linkedin.com/in/jrsilva051/)
+  **RM**: 559451
 - [Carlos Emilio Castillo Estrada](https://www.linkedin.com/in/)
+  **RM**: 559855
 
 ## 👩‍🏫 Professores:
 ### Tutor(a)
